@@ -4,7 +4,7 @@ using mission11.Data;
 
 namespace mission11.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class BookController : ControllerBase
     {

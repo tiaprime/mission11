@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3D430DB0-D6A7-4B53-9A54-BB95EF868AFE}|mission11\\mission11.csproj|c:\\users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D430DB0-D6A7-4B53-9A54-BB95EF868AFE}|mission11\\mission11.csproj|solutionrelative:mission11\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D430DB0-D6A7-4B53-9A54-BB95EF868AFE}|mission11\\mission11.csproj|c:\\users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3D430DB0-D6A7-4B53-9A54-BB95EF868AFE}|mission11\\mission11.csproj|solutionrelative:mission11\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3D430DB0-D6A7-4B53-9A54-BB95EF868AFE}|mission11\\mission11.csproj|c:\\users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D430DB0-D6A7-4B53-9A54-BB95EF868AFE}|mission11\\mission11.csproj|solutionrelative:mission11\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D430DB0-D6A7-4B53-9A54-BB95EF868AFE}|mission11\\mission11.csproj|c:\\users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\data\\bookdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D430DB0-D6A7-4B53-9A54-BB95EF868AFE}|mission11\\mission11.csproj|solutionrelative:mission11\\data\\bookdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D430DB0-D6A7-4B53-9A54-BB95EF868AFE}|mission11\\mission11.csproj|c:\\users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D430DB0-D6A7-4B53-9A54-BB95EF868AFE}|mission11\\mission11.csproj|solutionrelative:mission11\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D430DB0-D6A7-4B53-9A54-BB95EF868AFE}|mission11\\mission11.csproj|c:\\users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\data\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,33 +58,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "mission11\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\Properties\\launchSettings.json",
+              "RelativeToolTip": "mission11\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-21T16:58:38.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "BookController.cs",
               "DocumentMoniker": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\Controllers\\BookController.cs",
               "RelativeDocumentMoniker": "mission11\\Controllers\\BookController.cs",
               "ToolTip": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\Controllers\\BookController.cs",
               "RelativeToolTip": "mission11\\Controllers\\BookController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAcwA0AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T18:02:15.093Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\Program.cs",
               "RelativeDocumentMoniker": "mission11\\Program.cs",
               "ToolTip": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\Program.cs",
               "RelativeToolTip": "mission11\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACMAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T17:09:11.874Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "BookDbContext.cs",
               "DocumentMoniker": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\Data\\BookDbContext.cs",
               "RelativeDocumentMoniker": "mission11\\Data\\BookDbContext.cs",
@@ -88,12 +105,11 @@
               "RelativeToolTip": "mission11\\Data\\BookDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T16:38:13.805Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T16:38:13.805Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\Data\\Book.cs",
               "RelativeDocumentMoniker": "mission11\\Data\\Book.cs",

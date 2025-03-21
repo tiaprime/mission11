@@ -2,7 +2,7 @@
   {
     "ContainingType": "mission11.Controllers.BookController",
     "Method": "GetBooks",
-    "RelativePath": "api/Book/AllBooks",
+    "RelativePath": "Book/AllBooks",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
