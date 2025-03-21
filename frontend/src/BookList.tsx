@@ -5,17 +5,21 @@ import {Book} from "./types/Book"
 
 function BookList(){
     const [books, setBooks] = useState<Book[]>([])
+    const [pageSize, setPageSize] = useState<number>(5)
+    const [pageNum, setPageNum] = useState<number>(1)
+
 
     useEffect(() => {
         const fetchBooks = async () => {
-            const response = await fetch('https://localhost:5000/Book/AllBooks');
+            const response = await fetch(`https://localhost:7006/Book/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}`);
             const data = await response.json()
-            setBooks(data)
+            setBooks(data.books)
+            
+            
         } 
 
         fetchBooks()
-    }, [])
-
+    }, [pageSize, pageNum])
 
     return(
         <>
@@ -46,6 +50,21 @@ function BookList(){
 
 
 
+    <br />
+    <label>
+        Results per page:
+        <select
+        value={pageSize} 
+        onChange={
+            (b) => {setPageSize(Number(b.target.value))
+            setPageNum(1)
+            }}>
+
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            </select>
+    </label>
 
 
 
