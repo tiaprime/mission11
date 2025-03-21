@@ -66,8 +66,7 @@
               "RelativeToolTip": "mission11\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-21T16:58:38.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T16:58:38.269Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "mission11\\Controllers\\BookController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T18:02:15.093Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T18:02:15.093Z"
             },
             {
               "$type": "Document",
@@ -90,7 +88,7 @@
               "RelativeDocumentMoniker": "mission11\\Program.cs",
               "ToolTip": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\Program.cs",
               "RelativeToolTip": "mission11\\Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACMAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T17:09:11.874Z",
               "EditorCaption": ""
