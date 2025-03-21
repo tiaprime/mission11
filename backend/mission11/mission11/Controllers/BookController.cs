@@ -15,6 +15,8 @@ namespace mission11.Controllers
         public IEnumerable<Book> GetBooks()
         {
             var x = _bookContext.Books
+                .Skip(0)
+                .Take(5)
                 .ToList();
 
             return (x);
