@@ -12,12 +12,33 @@ namespace mission11.Controllers
         public BookController(BookDbContext temp) => _bookContext = temp;
 
         [HttpGet("AllBooks")]
-        public IEnumerable<Book> GetBooks()
+        public IActionResult GetBooks(int pageSize = 5, int pageNum = 1, bool sort = false)
         {
-            var x = _bookContext.Books
+
+            IQueryable<Book> x = _bookContext.Books;
+
+            if (sort) // If sort is true, order by Title
+            {
+                x = x.OrderBy(b => b.Title);
+            }
+
+            var totalNumBooks = _bookContext.Books.Count();
+
+
+            var paginatedBooks = x
+                .Skip((pageNum - 1) * pageSize)
+                .Take(pageSize)
                 .ToList();
 
-            return (x);
+            
+
+            var someObject = new
+            {
+                Books = paginatedBooks,
+                TotalNumBooks = totalNumBooks  
+            };
+
+            return Ok(someObject);
         }
 
     }
