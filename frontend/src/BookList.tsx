@@ -9,11 +9,12 @@ function BookList(){
     const [pageNum, setPageNum] = useState<number>(1)
     const [totalItems, setTotalItems] = useState<number>(0)
     const [totalPages, setTotalPages] = useState<number>(0)
+    const [sort, setSort] = useState(false);
 
 
     useEffect(() => {
         const fetchBooks = async () => {
-            const response = await fetch(`https://localhost:5000/Book/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}`);
+            const response = await fetch(`https://localhost:5000/Book/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}&sort=${sort}`);
             const data = await response.json()
             setBooks(data.books)
             setTotalItems(data.totalNumBooks)
@@ -21,7 +22,7 @@ function BookList(){
         } 
 
         fetchBooks()
-    }, [pageSize, pageNum, totalItems])
+    }, [pageSize, pageNum, totalItems, sort])
 
 
     return(
@@ -73,6 +74,10 @@ function BookList(){
             <option value="20">20</option>
             </select>
     </label>
+
+    <button onClick={() => setSort(!sort)}>
+                Sort {sort ? "Default Order" : "Alphabetically"}
+            </button>
 
 
 
