@@ -14,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookController.cs",
-              "DocumentMoniker": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\Controllers\\BookController.cs",
-              "RelativeDocumentMoniker": "mission11\\Controllers\\BookController.cs",
-              "ToolTip": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\Controllers\\BookController.cs",
-              "RelativeToolTip": "mission11\\Controllers\\BookController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T23:15:33.855Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:11:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
@@ -52,6 +39,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:13:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "mission11\\Controllers\\BookController.cs",
+              "ToolTip": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\Controllers\\BookController.cs",
+              "RelativeToolTip": "mission11\\Controllers\\BookController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T23:15:33.855Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -12,14 +12,21 @@ namespace mission11.Controllers
         public BookController(BookDbContext temp) => _bookContext = temp;
 
         [HttpGet("AllBooks")]
-        public IEnumerable<Book> GetBooks()
+        public IActionResult GetBooks(int pageSize = 5, int pageNum = 1)
         {
             var x = _bookContext.Books
-                .Skip(0)
-                .Take(5)
+                .Skip((pageNum - 1) * pageSize)
+                .Take(pageSize)
                 .ToList();
+            var totalNumBooks = _bookContext.Books.Count();
 
-            return (x);
+            var someObject = new
+            {
+                Books = x,
+                TotalNumBooks = totalNumBooks  
+            };
+
+            return Ok(someObject);
         }
 
     }
