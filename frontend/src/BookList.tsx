@@ -14,7 +14,7 @@ function BookList({selectedCategories}: {selectedCategories: string[]}){
 
     useEffect(() => {
         const fetchBooks = async () => {
-            const categoryParams = selectedCategories.map((cat) => `projectTypes=${encodeURIComponent(cat)}`).join('&');
+            const categoryParams = selectedCategories.map((cat) => `bookCategories=${encodeURIComponent(cat)}`).join('&');
 
             const response = await fetch(`https://localhost:5000/Book/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}&sort=${sort}${selectedCategories.length ? `&${categoryParams}` : ''}`
             );

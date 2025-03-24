@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using mission11.Data;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace mission11.Controllers
 {
@@ -12,20 +13,27 @@ namespace mission11.Controllers
         public BookController(BookDbContext temp) => _bookContext = temp;
 
         [HttpGet("AllBooks")]
-        public IActionResult GetBooks(int pageSize = 5, int pageNum = 1, bool sort = false)
+        public IActionResult GetBooks(int pageSize = 5, int pageNum = 1, bool sort = false, [FromQuery] List<string>? bookCategories = null)
         {
 
-            IQueryable<Book> x = _bookContext.Books;
+            IQueryable<Book> query = _bookContext.Books;
+
+
+            if (bookCategories != null && bookCategories.Any())  //check for if there is a category filter
+            {
+                query = query.Where(b => bookCategories.Contains(b.Category));
+            }
+
 
             if (sort) // If sort is true, order by Title
             {
-                x = x.OrderBy(b => b.Title);
+                query = query.OrderBy(b => b.Title);
             }
 
             var totalNumBooks = _bookContext.Books.Count();
 
 
-            var paginatedBooks = x
+            var paginatedBooks = query
                 .Skip((pageNum - 1) * pageSize)
                 .Take(pageSize)
                 .ToList();

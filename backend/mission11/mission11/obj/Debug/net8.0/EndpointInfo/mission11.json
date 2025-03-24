@@ -36,6 +36,16 @@
               "type": "boolean",
               "default": false
             }
+          },
+          {
+            "name": "bookCategories",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
           }
         ],
         "responses": {
