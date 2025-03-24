@@ -3,7 +3,7 @@ import {Book} from "./types/Book"
 
 
 
-function BookList(){
+function BookList({selectedCategories}: {selectedCategories: string[]}){
     const [books, setBooks] = useState<Book[]>([])
     const [pageSize, setPageSize] = useState<number>(5)
     const [pageNum, setPageNum] = useState<number>(1)
@@ -14,7 +14,10 @@ function BookList(){
 
     useEffect(() => {
         const fetchBooks = async () => {
-            const response = await fetch(`https://localhost:5000/Book/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}&sort=${sort}`);
+            const categoryParams = selectedCategories.map((cat) => `projectTypes=${encodeURIComponent(cat)}`).join('&');
+
+            const response = await fetch(`https://localhost:5000/Book/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}&sort=${sort}${selectedCategories.length ? `&${categoryParams}` : ''}`
+            );
             const data = await response.json()
             setBooks(data.books)
             setTotalItems(data.totalNumBooks)
@@ -22,12 +25,11 @@ function BookList(){
         } 
 
         fetchBooks()
-    }, [pageSize, pageNum, totalItems, sort])
+    }, [pageSize, pageNum, totalItems, sort, selectedCategories])
 
 
     return(
         <>
-        <h1>Welcome to my Books</h1>
         <br />
         {books.map((b) =>(
         <div id="bookCard" className="card" key="{b.bookId}"> 
