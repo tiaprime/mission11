@@ -41,6 +41,23 @@ namespace mission11.Controllers
             return Ok(someObject);
         }
 
+
+        [HttpGet("GetCategories")]
+        public IActionResult GetBookCategories()
+        {
+            var BookCategories = _bookContext.Books
+                .Select(p => p.Category)
+                .Distinct()
+                .ToList();
+            return Ok(BookCategories);
+        }
+
+
+
+
+
+
+
     }
 }
 

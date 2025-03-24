@@ -26,6 +26,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "mission11.Controllers.BookController",
+    "Method": "GetBookCategories",
+    "RelativePath": "Book/GetCategories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "mission11.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
