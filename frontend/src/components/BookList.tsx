@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
-import {Book} from "./types/Book"
+import {Book} from "../types/Book"
+import { useNavigate } from "react-router-dom"
 
 
 
@@ -10,12 +11,14 @@ function BookList({selectedCategories}: {selectedCategories: string[]}){
     const [totalItems, setTotalItems] = useState<number>(0)
     const [totalPages, setTotalPages] = useState<number>(0)
     const [sort, setSort] = useState(false);
+    const navigate = useNavigate()
+
 
 
     useEffect(() => {
         const fetchBooks = async () => {
             const categoryParams = selectedCategories.map((cat) => `bookCategories=${encodeURIComponent(cat)}`).join('&');
-
+            
             const response = await fetch(`https://localhost:5000/Book/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}&sort=${sort}${selectedCategories.length ? `&${categoryParams}` : ''}`
             );
             const data = await response.json()
@@ -32,7 +35,7 @@ function BookList({selectedCategories}: {selectedCategories: string[]}){
         <>
         <br />
         {books.map((b) =>(
-        <div id="bookCard" className="card" key="{b.bookId}"> 
+        <div id="bookCard" className="card" key="{b.bookID}"> 
             <h3 className="card-title">{b.title}</h3>
             <div className="card-body">
                 <ul className="list-unstyled">
@@ -44,6 +47,11 @@ function BookList({selectedCategories}: {selectedCategories: string[]}){
                     <li> <strong>Number of Pages:</strong> {b.pageCount}</li>
                     <li> <strong>Price:</strong> {b.price}</li>
                 </ul>
+
+
+                <button className="btn btn-success" onClick={() => navigate(`/donate/${b.bookID}/${b.title}/${b.author}/${b.isbn}/${b.price}`) }  >Buy</button>
+
+
             </div>
 
         </div>

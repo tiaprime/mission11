@@ -16,21 +16,22 @@ namespace mission11.Controllers
         public IActionResult GetBooks(int pageSize = 5, int pageNum = 1, bool sort = false, [FromQuery] List<string>? bookCategories = null)
         {
 
-            IQueryable<Book> query = _bookContext.Books;
-
+            //IQueryable<Book> query = _bookContext.Books;
+            var query = _bookContext.Books.AsQueryable();
 
             if (bookCategories != null && bookCategories.Any())  //check for if there is a category filter
             {
                 query = query.Where(b => bookCategories.Contains(b.Category));
             }
 
+            var totalNumBooks = _bookContext.Books.Count();
 
             if (sort) // If sort is true, order by Title
             {
                 query = query.OrderBy(b => b.Title);
             }
 
-            var totalNumBooks = _bookContext.Books.Count();
+            
 
 
             var paginatedBooks = query
