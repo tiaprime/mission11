@@ -2,7 +2,13 @@ import { useNavigate } from "react-router-dom"
 import { useCart } from "../context/CartContext"
 import { CartItem } from "../types/CartItem"
 
-function CartPage () {
+//-----------------------------------TOAST------------
+import React from "react";
+import Toast from "../components/Toast";
+//-------------TOAST-------------------
+const CartPage: React.FC = () => {
+
+
     const navigate = useNavigate()
     const { cart, removeFromCart } = useCart()
 
@@ -12,6 +18,15 @@ function CartPage () {
 
 
     return(<div>
+        {/* -----------------------------------TOAST------------------------- */}
+        <div className="container mt-5">
+            {/* I can trigger more toasts here if needed */}
+            <Toast />
+        </div>
+
+
+
+
         <h2>Your Cart</h2>
 
         <div>
