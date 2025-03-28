@@ -24,7 +24,7 @@ namespace mission11.Controllers
                 query = query.Where(b => bookCategories.Contains(b.Category));
             }
 
-            var totalNumBooks = _bookContext.Books.Count();
+            var totalNumBooks = query.Count();
 
             if (sort) // If sort is true, order by Title
             {

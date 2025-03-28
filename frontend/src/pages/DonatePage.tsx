@@ -25,7 +25,7 @@ function DonatePage () {
 
     return(<>
         <Welcome />
-        <h2>Add {title} by  {author} to cart</h2>    
+        <h2>Want to add {title} by  {author} to cart?</h2>    
 
         <div>
             <h3>Price: ${price}</h3>
