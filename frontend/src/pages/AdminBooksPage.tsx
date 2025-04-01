@@ -36,8 +36,8 @@ const AdminProjectPage = () => {
     <div>
       <Welcome />
       <h1> Admin - Books</h1>
-      <table>
-        <thead>
+      <table className="table table-bordered table-striped">
+        <thead className="table-dark">
           <tr>
             <th>ID</th>
             <th>Title</th>
@@ -48,6 +48,7 @@ const AdminProjectPage = () => {
             <th>Category</th>
             <th>Page Count</th>
             <th>Price</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -63,10 +64,16 @@ const AdminProjectPage = () => {
               <td>{b.pageCount}</td>
               <td>{b.price}</td>
               <td>
-                <button onClick={() => console.log(`Edit book ${b.bookID}`)}>
+                <button
+                  className="btn btn-primary btn-sm w-100 mb-1"
+                  onClick={() => console.log(`Edit book ${b.bookID}`)}
+                >
                   Edit
                 </button>
-                <button onClick={() => console.log(`Delete book ${b.bookID}`)}>
+                <button
+                  className="btn btn-danger btn-sm w-100"
+                  onClick={() => console.log(`Delete book ${b.bookID}`)}
+                >
                   Delete
                 </button>
               </td>
