@@ -1,18 +1,24 @@
 import { useEffect, useState } from 'react';
 import { Book } from '../types/Book';
 import { fetchBooks } from '../api/BooksAPI';
+import Welcome from '../components/Welcome';
+import Pagination from '../components/Pagination';
 
 const AdminProjectPage = () => {
   const [books, setBooks] = useState<Book[]>([]);
-
+  const [pageSize, setPageSize] = useState<number>(5);
+  const [pageNum, setPageNum] = useState<number>(1);
+  const [totalPages, setTotalPages] = useState<number>(0);
+  const [sort, setSort] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadBooks = async () => {
       try {
-        const data = await fetchBooks(10, 1, false, []);
+        const data = await fetchBooks(pageSize, pageNum, sort, []);
         setBooks(data.books);
+        setTotalPages(Math.ceil(data.totalNumBooks / pageSize));
       } catch (err) {
         setError((err as Error).message);
       } finally {
@@ -21,13 +27,14 @@ const AdminProjectPage = () => {
     };
 
     loadBooks();
-  }, []);
+  }, [pageSize, pageNum, sort]);
 
   if (loading) return <p>Loading Books...</p>;
   if (error) return <p className="text-red-500">Error: {error}</p>;
 
   return (
     <div>
+      <Welcome />
       <h1> Admin - Books</h1>
       <table>
         <thead>
@@ -55,10 +62,32 @@ const AdminProjectPage = () => {
               <td>{b.category}</td>
               <td>{b.pageCount}</td>
               <td>{b.price}</td>
+              <td>
+                <button onClick={() => console.log(`Edit book ${b.bookID}`)}>
+                  Edit
+                </button>
+                <button onClick={() => console.log(`Delete book ${b.bookID}`)}>
+                  Delete
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
+      <Pagination
+        currentPage={pageNum}
+        totalPages={totalPages}
+        pageSize={pageSize}
+        sortPage={sort}
+        onSortChange={(newSort) => {
+          setSort(newSort);
+        }}
+        onPageChange={setPageNum}
+        onPageSizeChange={(newSize) => {
+          setPageSize(newSize);
+          setPageNum(1);
+        }}
+      />
     </div>
   );
 };

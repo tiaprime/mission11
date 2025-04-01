@@ -5,6 +5,7 @@ import DonatePage from './pages/DonatePage';
 import BooksPage from './pages/BooksPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BuyPage from './pages/BuyPage';
+import AdminBooksPage from './pages/AdminBooksPage';
 
 function App() {
   // const [selectedCategories, setSelectedCategories] = useState<string[]>([])
@@ -22,31 +23,12 @@ function App() {
             />
             <Route path="/kill" element={<BuyPage />} />
             <Route path="/cart/" element={<CartPage />} />
+            <Route path="/adminbooks/" element={<AdminBooksPage />} />
           </Routes>
         </Router>
       </CartProvider>
     </>
   );
-
-  // return (
-  //   <>
-  //   <div className='container mt-4'>
-  //     <div className='row bg-primary text-white '>
-  //       <Welcome/>
-  //     </div>
-  //     <div className='row'>
-  //         <div className='col-md-3'>
-  //           <CategoryFilter selectedCategories={selectedCategories}
-  //           setSelectedCategories={setSelectedCategories}/>
-  //         </div>
-  //         <div className='col-md-9'>
-  //           <BookList selectedCategories={selectedCategories}/>
-  //         </div>
-  //     </div>
-
-  //   </div>
-  //   </>
-  // )
 }
 
 export default App;
