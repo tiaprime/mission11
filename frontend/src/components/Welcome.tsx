@@ -1,9 +1,11 @@
-function Welcome(){
-    return (<>
-    <div className='row bg-primary text-white '>
+function Welcome() {
+  return (
+    <>
+      <div className="row bg-primary text-white ">
         <h1>Bombastic Bookish Babe's Book Store</h1>
-    </div>
-    </>)
+      </div>
+    </>
+  );
 }
 
-export default Welcome
+export default Welcome;
