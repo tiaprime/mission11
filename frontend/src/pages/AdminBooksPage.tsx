@@ -4,6 +4,7 @@ import { fetchBooks } from '../api/BooksAPI';
 import Welcome from '../components/Welcome';
 import Pagination from '../components/Pagination';
 import NewBookForm from '../components/NewBookForm';
+import EditBookForm from '../components/EditBookForm';
 
 const AdminProjectPage = () => {
   const [books, setBooks] = useState<Book[]>([]);
@@ -13,7 +14,9 @@ const AdminProjectPage = () => {
   const [sort, setSort] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  // form stuff
   const [showForm, setShowForm] = useState(false);
+  const [editingBook, setEditingBook] = useState<Book | null>(null);
 
   useEffect(() => {
     const loadBooks = async () => {
@@ -59,6 +62,21 @@ const AdminProjectPage = () => {
         />
       )}
 
+      {/* EDITING */}
+
+      {editingBook && (
+        <EditBookForm
+          book={editingBook}
+          onSuccess={() => {
+            setEditingBook(null);
+            fetchBooks(pageSize, pageNum, sort, []).then((data) =>
+              setBooks(data.books)
+            );
+          }}
+          onCancel={() => setEditingBook(null)}
+        />
+      )}
+
       <table className="table table-bordered table-striped">
         <thead className="table-dark">
           <tr>
@@ -89,7 +107,7 @@ const AdminProjectPage = () => {
               <td>
                 <button
                   className="btn btn-primary btn-sm w-100 mb-1"
-                  onClick={() => console.log(`Edit book ${b.bookID}`)}
+                  onClick={() => setEditingBook(b)}
                 >
                   Edit
                 </button>

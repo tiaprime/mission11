@@ -53,3 +53,22 @@ export const addBook = async (newBook: Book): Promise<Book> => {
     throw error;
   }
 };
+
+export const updateBook = async (
+  bookID: number,
+  updatedBook: Book
+): Promise<Book> => {
+  try {
+    const response = await fetch(`${API_URL}/UpdateBook/${bookID}`, {
+      method: 'Put',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(updatedBook),
+    });
+    return await response.json();
+  } catch (error) {
+    console.error('Error updating project:', error);
+    throw error;
+  }
+};
