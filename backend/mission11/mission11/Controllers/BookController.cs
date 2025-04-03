@@ -61,7 +61,7 @@ namespace mission11.Controllers
             return Ok(BookCategories);
         }
 
-        [HttpPost("Add")]
+        [HttpPost("AddBook")]
         public IActionResult AddBook([FromBody]Book newBook)
         {
             _bookContext.Books.Add(newBook);

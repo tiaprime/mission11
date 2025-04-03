@@ -52,9 +52,10 @@
               "RelativeDocumentMoniker": "mission11\\Program.cs",
               "ToolTip": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\Program.cs",
               "RelativeToolTip": "mission11\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAewCMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T20:25:38.991Z"
+              "WhenOpened": "2025-03-28T20:25:38.991Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -64,7 +65,7 @@
               "RelativeDocumentMoniker": "mission11\\Controllers\\BookController.cs",
               "ToolTip": "C:\\Users\\matti\\source\\repos\\mission11\\backend\\mission11\\mission11\\Controllers\\BookController.cs",
               "RelativeToolTip": "mission11\\Controllers\\BookController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAowBcAAABMAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAgwD8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-21T23:15:33.855Z",
               "EditorCaption": ""

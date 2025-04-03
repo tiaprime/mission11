@@ -24,7 +24,7 @@ const Modal = forwardRef<HTMLDivElement>((_, ref) => {
             ></button>
           </div>
           <div className="modal-body">
-            Make sure to check out TheBookmarkMaid.com for dozens of quality
+            Make sure to check out BookmarkMaiden.com for dozens of quality
             bookmarks!
           </div>
           <div className="modal-footer">

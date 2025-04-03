@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import { Book } from '../types/Book';
+import { addBook } from '../api/BooksAPI';
 
-const NewBookForm = () => {
+interface NewBookFormProps {
+  onSuccess: () => void;
+  onCancel: () => void;
+}
+
+const NewBookForm = ({ onSuccess, onCancel }: NewBookFormProps) => {
   const [formData, setFormData] = useState<Book>({
     bookID: 0,
     title: '',
@@ -14,44 +20,97 @@ const NewBookForm = () => {
     price: 0,
   });
 
-  return;
-  <form>
-    <h2>Add a New Book</h2>
-    <label>
-      Title:
-      <input type="text" />
-    </label>
-    <label>
-      Author:
-      <input type="text" />
-    </label>
-    <label>
-      Publisher:
-      <input type="text" />
-    </label>
-    <label>
-      ISBN:
-      <input type="text" />
-    </label>
-    <label>
-      Classification:
-      <input type="text" />
-    </label>
-    <label>
-      Category:
-      <input type="text" />
-    </label>
-    <label>
-      Page Count:
-      <input type="text" />
-    </label>
-    <label>
-      Price:
-      <input type="text" />
-    </label>
-    <button type="submit">Submit</button>
-    <button type="button">Cancel</button>
-  </form>;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    await addBook(formData);
+    onSuccess();
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <h2>Add a New Book</h2>
+      <label>
+        Title:
+        <input
+          type="text"
+          name="title"
+          value={formData.title}
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        Author:
+        <input
+          type="text"
+          name="author"
+          value={formData.author}
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        Publisher:
+        <input
+          type="text"
+          name="publisher"
+          value={formData.publisher}
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        ISBN:
+        <input
+          type="text"
+          name="isbn"
+          value={formData.isbn}
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        Classification:
+        <input
+          type="text"
+          name="classification"
+          value={formData.classification}
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        Category:
+        <input
+          type="text"
+          name="category"
+          value={formData.category}
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        Page Count:
+        <input
+          type="number"
+          name="pageCount"
+          value={formData.pageCount}
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        Price:
+        <input
+          type="number"
+          name="price"
+          value={formData.price}
+          onChange={handleChange}
+        />
+      </label>
+      <button type="submit">Submit</button>
+      <button type="button" onClick={onCancel}>
+        Cancel
+      </button>
+    </form>
+  );
 };
 
 export default NewBookForm;

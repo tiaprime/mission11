@@ -3,6 +3,7 @@ import { Book } from '../types/Book';
 import { fetchBooks } from '../api/BooksAPI';
 import Welcome from '../components/Welcome';
 import Pagination from '../components/Pagination';
+import NewBookForm from '../components/NewBookForm';
 
 const AdminProjectPage = () => {
   const [books, setBooks] = useState<Book[]>([]);
@@ -12,6 +13,7 @@ const AdminProjectPage = () => {
   const [sort, setSort] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
     const loadBooks = async () => {
@@ -36,6 +38,27 @@ const AdminProjectPage = () => {
     <div>
       <Welcome />
       <h1> Admin - Books</h1>
+
+      {!showForm && (
+        <button
+          className="btn btn-success mb-3"
+          onClick={() => setShowForm(true)}
+        >
+          Add Book
+        </button>
+      )}
+      {showForm && (
+        <NewBookForm
+          onSuccess={() => {
+            setShowForm(false);
+            fetchBooks(pageSize, pageNum, sort, []).then((data) =>
+              setBooks(data.books)
+            );
+          }}
+          onCancel={() => setShowForm(false)}
+        />
+      )}
+
       <table className="table table-bordered table-striped">
         <thead className="table-dark">
           <tr>
