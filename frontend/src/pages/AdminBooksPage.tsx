@@ -45,7 +45,7 @@ const AdminProjectPage = () => {
       await deleteBook(bookID);
       setBooks(books.filter((b) => b.bookID !== bookID));
     } catch (error) {
-      alert('Failed to delete book. PLease try again.');
+      alert('Failed to delete book. Please try again.');
     }
   };
 
