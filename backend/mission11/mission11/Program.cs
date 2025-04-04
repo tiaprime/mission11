@@ -14,26 +14,26 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BookDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("BookConnection")));
 
+// builder.Services.AddCors(options =>
+//     options.AddPolicy("AllowReactApp",
+//         policy =>
+//         {policy.WithOrigins("https://your-frontend.azurestaticapps.net")
+//             .AllowAnyMethod()
+//             .AllowAnyHeader();
+//         }
+//         ));
+
+
+
+
 builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
         policy =>
-        {policy.WithOrigins("https://your-frontend.azurestaticapps.net")
+        {policy.AllowAnyOrigin()
             .AllowAnyMethod()
             .AllowAnyHeader();
         }
         ));
-
-
-
-
-    //     builder.Services.AddCors(options =>
-    // options.AddPolicy("AllowReactApp",
-    //     policy =>
-    //     {policy.AllowAnyOrigin()
-    //         .AllowAnyMethod()
-    //         .AllowAnyHeader();
-    //     }
-    //     ));
 
 
 //OLD CORS POLICY
