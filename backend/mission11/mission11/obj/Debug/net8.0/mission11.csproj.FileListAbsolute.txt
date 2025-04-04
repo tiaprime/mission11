@@ -136,10 +136,3 @@ C:\Users\matti\source\repos\mission11\backend\mission11\mission11\obj\Debug\net8
 C:\Users\matti\source\repos\mission11\backend\mission11\mission11\obj\Debug\net8.0\mission11.genruntimeconfig.cache
 C:\Users\matti\source\repos\mission11\backend\mission11\mission11\obj\Debug\net8.0\ref\mission11.dll
 C:\Users\matti\source\repos\mission11\backend\mission11\mission11\bin\Debug\net8.0\Bookstore.sqlite
-C:\Users\matti\source\repos\mission11\backend\mission11\mission11\bin\Debug\net8.0\publish\web.config
-C:\Users\matti\source\repos\mission11\backend\mission11\mission11\bin\Debug\net8.0\publish\appsettings.Development.json
-C:\Users\matti\source\repos\mission11\backend\mission11\mission11\bin\Debug\net8.0\publish\appsettings.json
-C:\Users\matti\source\repos\mission11\backend\mission11\mission11\bin\Debug\net8.0\publish\mission11.deps.json
-C:\Users\matti\source\repos\mission11\backend\mission11\mission11\bin\Debug\net8.0\publish\mission11.runtimeconfig.json
-C:\Users\matti\source\repos\mission11\backend\mission11\mission11\bin\Debug\net8.0\publish\mission11.staticwebassets.endpoints.json
-C:\Users\matti\source\repos\mission11\backend\mission11\mission11\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
