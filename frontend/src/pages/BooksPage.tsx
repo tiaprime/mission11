@@ -5,7 +5,7 @@ import Welcome from '../components/Welcome';
 import CartSummary from '../components/CartSummary';
 
 // -------------------------------------------
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import Modal from '../components/Modal';
 import { Modal as BootstrapModal } from 'bootstrap';
 
