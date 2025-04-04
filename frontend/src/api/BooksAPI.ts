@@ -6,9 +6,8 @@ interface FetchBooksResponse {
 }
 
 const API_URL =
-  'https://bookstore-allen-backend2-a2btdyefdda6cjas.eastus-01.azurewebsites.net/book';
-// const API_URL =
-//   'https://bookstore-allen-backend-amf9gtf3ekfmfdfh.eastus-01.azurewebsites.net/Book';
+  'https://bookproject-mattia-backend-e4d4dcaqefckb8fq.eastus-01.azurewebsites.net/book';
+
 // const API_URL = 'https://localhost:5000/Book';
 
 export const fetchBooks = async (
