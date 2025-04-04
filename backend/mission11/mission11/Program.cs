@@ -17,11 +17,24 @@ builder.Services.AddDbContext<BookDbContext>(options =>
 builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
         policy =>
-        {policy.AllowAnyOrigin()
+        {policy.WithOrigins("https://your-frontend.azurestaticapps.net")
             .AllowAnyMethod()
             .AllowAnyHeader();
         }
         ));
+
+
+
+
+    //     builder.Services.AddCors(options =>
+    // options.AddPolicy("AllowReactApp",
+    //     policy =>
+    //     {policy.AllowAnyOrigin()
+    //         .AllowAnyMethod()
+    //         .AllowAnyHeader();
+    //     }
+    //     ));
+
 
 //OLD CORS POLICY
 // builder.Services.AddCors(options =>
